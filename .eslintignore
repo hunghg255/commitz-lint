@@ -1,0 +1,5 @@
+dist
+build
+bin
+build.config.ts
+node_modules
