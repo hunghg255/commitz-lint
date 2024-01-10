@@ -1,6 +1,6 @@
 {
   "name": "commitz-lint",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -29,12 +29,8 @@
     "build": "unbuild",
     "dev": "unbuild --stub",
     "test:cli": "node ./dist/cli.mjs",
-    "lint": "tsc --noEmit",
-    "lint-es": "eslint --ext .ts,.tsx src --color",
     "start": "esno src/cli.ts",
     "test": "vitest",
-    "verify-commit": "verify-commit-msg",
-    "prepare": "git-scm-hooks",
     "changelog": "npx changeloggithub@latest --all true && git add CHANGELOG.md && git commit -m 'chore: update CHANGELOG.md'",
     "release": "bumpp -r && npm run changelog"
   },
@@ -44,26 +40,20 @@
     "@types/node": "^18.19.3",
     "bumpp": "^9.2.1",
     "esno": "^0.16.3",
-    "git-scm-hooks": "^0.0.7",
     "prettier": "^3.1.1",
     "tslib": "^2.6.2",
     "typescript": "^5.3.3",
     "unbuild": "^2.0.0",
-    "verify-commit-msg": "^0.0.10",
     "vitest": "^0.34.6"
   },
-  "git-hooks": {
-    "pre-commit": "npm run lint",
-    "commit-msg": "npm run verify-commit"
-  },
   "keywords": [],
-  "homepage": "https://github.com/hunghg255/unbuild-package",
+  "homepage": "https://github.com/hunghg255/commitz-lint#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/hunghg255/unbuild-package"
+    "url": "https://github.com/hunghg255/commitz-lint"
   },
   "bugs": {
-    "url": "https://github.com/hunghg255/unbuild-package/issues"
+    "url": "https://github.com/hunghg255/commitz-lint/issues"
   },
   "dependencies": {
     "kolorist": "^1.8.0",
