@@ -124,7 +124,7 @@ const defaultConfig = {
   },
 } as any;
 
-const VERSION = '0.0.2';
+const VERSION = '0.0.3';
 
 export const startCli = async () => {
   intro(bold(rainbow(`Commit lint v${VERSION}`)));
